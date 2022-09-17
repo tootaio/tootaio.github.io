@@ -1,0 +1,35 @@
+Warning: 记得向对方表明你做 rt-PCR 是用于入境中国的。
+         做了之后要拿 hardcopy，不然上不到飞机（复印一份）
+
+48 小时和 24 小时的 rt-PCR test，需要不同的lab不同clinic。
+    lab是给哪一个做（会不会重复）
+    多久可以拿到（来不来得及）
+    他们用多长时间去做验证（要>4小时）
+    report有没有qr code
+
+Spoiler: 核酸检测拨打热线参考问题 推荐
+    以下给大家准备了几个问题：
+        May I know what is the lab that handles this covid test?
+        What is the processing time written on the report?
+        How long does it take to get the report after the test?
+        Is there a QR code in the Test Report
+        What is the price for rt-PCR
+        What documents do I need for doing this test
+
+Spoiler: 两份核酸报告的sample collection time是否一定需要间隔24小时？抑或是只要48小时和24小时前就可以了？
+    一个5/9， 一个6/9的核酸采样就可以了
+
+Spoiler: 关于核酸检测的地区划分
+    审核地区划分为三个部分：【东马、槟城、吉隆坡】
+    吉隆坡☞除了东马和槟城外，都由吉隆坡审核
+    槟城总领馆的审核范围是玻璃市、吉打、槟城、霹雳，其他西马州归吉隆坡大使馆审核
+
+    合法情况
+        第一家在 Johor，第二家在 KL
+        两家都在 Penang 的不同一所诊所
+        两家都在 Ipoh 的不同一所诊所
+
+    不合法情况
+        第一家在 Penang，第二家在 KL
+        第一家在 Ipoh，第二家在 KL
+        两家都在 Johor 的同一所诊所

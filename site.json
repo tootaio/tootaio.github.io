@@ -1,0 +1,109 @@
+{
+  "contents": [
+    {
+      "fileName": "announcements",
+      "name": "公告",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": "text-bg-primary text-center"
+    },
+    {
+      "fileName": "rules",
+      "name": "规则",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": "text-bg-danger text-center"
+    },
+    {
+      "fileName": "visa",
+      "name": "留学签证申请",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": null
+    },
+    {
+      "fileName": "pcr",
+      "name": "核酸检测",
+      "classList": null
+    },
+    {
+      "fileName": "greenCode",
+      "name": "绿码（健康码）",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": null
+    },
+    {
+      "fileName": "insurance",
+      "name": "保险",
+      "badge": "更新",
+      "badgeStyle": "success",
+      "classList": null
+    },
+    {
+      "fileName": "chartedFlight",
+      "name": "包机",
+      "badge": "还在写",
+      "badgeStyle": "warning",
+      "classList": null
+    },
+    {
+      "fileName": "quarantine",
+      "name": "隔离",
+      "classList": null
+    },
+    {
+      "fileName": "afterQuarantine",
+      "name": "上海隔离之后",
+      "footer": "最后更新日期：2022年9月16日18点25分"
+    },
+    {
+      "fileName": "finance",
+      "name": "资金",
+      "badge": "队列中",
+      "badgeStyle": "secondary",
+      "classList": null
+    },
+    {
+      "fileName": "roaming",
+      "name": "手机漫游 Roaming"
+    },
+    {
+      "fileName": "tips",
+      "name": "实用贴士",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": null
+    },
+    {
+      "hidden": true,
+      "fileName": "mailFormat",
+      "name": "邮箱格式",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": null
+    },
+    {
+      "fileName": "passportMissing",
+      "name": "护照遗失",
+      "badge": "警告",
+      "badgeStyle": "danger",
+      "classList": null
+    },
+    {
+      "fileName": "contactList",
+      "name": "Contact List",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": null
+    },
+    {
+      "fileName": "about",
+      "name": "关于我们",
+      "badge": null,
+      "badgeStyle": null,
+      "classList": "text-center",
+      "footer": "Thanks everyone from MAS and the all student assistants! You dida-dida me, I huala-huala you"
+    }
+  ]
+}

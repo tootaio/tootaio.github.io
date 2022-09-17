@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="预祝各位顺利登机，平安抵达。网站by：麦祖奕，章育欣"/>
+    <meta property="og:title" content="留华生包机注意事项汇总"/>
+    <meta property="og:type" content="text/html"/>
+    <meta property="og:url" content="https://kingsmai.github.io"/>
+    <meta property="og:image" content="https://www.savethestudent.org/uploads/flights.jpg"/>
+    <title>留华生包机注意事项汇总</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    <style>
+        .overflow-scroll {
+            overflow-x: hidden !important;
+            -ms-overflow-style: none;
+            /*scrollbar-width: none;*/
+        }
+
+        .overflow-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        body, #content {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="d-flex flex-nowrap">
+
+    <div class="container">
+        <div class="row">
+            <!--            This is auto generated sidebar, DO NOT Edit it!-->
+            <div class="col-3 vh-100 pt-3 overflow-scroll d-none d-md-block">
+                <nav id="sidebar" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3><a href="/" class="link-dark text-decoration-none">留华生来华资料汇总</a></h3>
+                    </nav>
+                </nav>
+            </div>
+
+            <div id="content" class="col-md-9 pt-3 pb-3 vh-100 overflow-scroll">
+                <!-- Content At here! -->
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    $.ajax({
+        url: './site.json',
+        success: function (site) {
+            const promises = [];
+            const siteContents = site.contents;
+
+            for (const content of siteContents) {
+                promises.push($.ajax({
+                    url: `./Topics/${content['fileName']}.html?nocache=${Math.random()}`
+                }))
+            }
+            Promise.all(promises).then(responseList => {
+                let cardClass = ["card", "mb-3"]
+                for (let i = 0; i < responseList.length; i++) {
+                    let contentInfo = siteContents[i];
+
+                    if (contentInfo['hidden']) {
+                        continue;
+                    }
+
+                    let card = document.createElement("div")
+                    let classList = contentInfo['classList'] != null ? contentInfo['classList'] : '';
+                    let badgeStyle = contentInfo['badgeStyle'] != null ? contentInfo['badgeStyle'] : 'light';
+
+                    card.id = contentInfo['fileName'];
+                    card.classList.add(...cardClass)
+                    if (classList !== '') {
+                        card.classList.add(...classList.split(' '))
+                    }
+
+                    let cardHeader = document.createElement("div");
+                    cardHeader.classList.add("card-header")
+                    cardHeader.innerText = contentInfo['name']
+
+                    let badge = document.createElement('span');
+                    if (contentInfo['badge'] != null) {
+                        badge.classList.add("badge", "rounded-pill", "ms-3", `text-bg-${badgeStyle}`)
+                        badge.innerText = contentInfo['badge']
+                        cardHeader.appendChild(badge);
+                    }
+
+                    let cardBody = document.createElement("div");
+                    cardBody.classList.add("card-body")
+                    cardBody.innerHTML = responseList[i];
+
+                    card.appendChild(cardHeader);
+                    card.appendChild(cardBody);
+
+                    if (contentInfo['footer'] != null) {
+                        let footer = document.createElement("div");
+                        footer.classList.add("card-footer", "text-muted")
+                        footer.innerHTML = contentInfo['footer'];
+                        card.appendChild(footer)
+                    }
+
+                    $("#content").append(card)
+
+                    // Sidebar list
+                    let link = document.createElement("a")
+                    link.href = `#${contentInfo['fileName']}`
+                    link.classList.add("nav-link")
+                    link.innerText = contentInfo['name']
+                    link.appendChild(badge);
+                    $("#sidebar > nav").append(link)
+                }
+                if (window.location.hash) {
+                    document.querySelector(window.location.hash).scrollIntoView()
+                }
+            })
+        }
+    });
+</script>
+</body>
+</html>

@@ -20,6 +20,15 @@ The `docs` folder contains all topics in plain text. It will be used to record t
 
 > Using PhpStorm will make your works more efficiently.
 
+### Startup
+
+make sure NodeJS is installed on your computer
+
+1. cd into your project folder
+2. run `npm install`
+3. run `npm run build`, you need to run this command everytime the code is change.
+4. The generated file will create inside `dist` folder, open it and VOILA!.
+
 ### Declare your topic
 
 First, you need to declare your topic in `site.json`
@@ -63,6 +72,6 @@ All of the class is Bootstrap compatible.
 **❤如果觉得我们做的不错，劳烦客官打赏一杯咖啡哦❤**
 
 <div>
-<img alt="打赏" src="./Images/微信支付.png" height="256">
-<img alt="打赏" src="./Images/支付宝收款码.jpg" height="256">
+<img alt="打赏" src="./src/Topics/Images/微信支付.png" height="256">
+<img alt="打赏" src="./src/Topics/Images/支付宝收款码.jpg" height="256">
 </div>

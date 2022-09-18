@@ -59,14 +59,14 @@
 </main>
 <script>
     $.ajax({
-        url: './site.json',
+        url: './src/site.json',
         success: function (site) {
             const promises = [];
             const siteContents = site.contents;
 
             for (const content of siteContents) {
                 promises.push($.ajax({
-                    url: `./Topics/${content['fileName']}.html?nocache=${Math.random()}`
+                    url: `./src/Topics/${content['fileName']}.html?nocache=${Math.random()}`
                 }))
             }
             Promise.all(promises).then(responseList => {

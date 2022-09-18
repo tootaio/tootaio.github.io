@@ -16,6 +16,13 @@
       "classList": "text-bg-danger text-center"
     },
     {
+      "fileName": "backToSchool",
+      "name": "返校步骤",
+      "badge": "热门",
+      "badgeStyle": "danger",
+      "footer": "本文资料由【留华同学会行政部】整理"
+    },
+    {
       "fileName": "visa",
       "name": "留学签证申请",
       "badge": null,

@@ -196,6 +196,29 @@ const siteContents = site.contents;
               fill="#ED70A3" p-id="1145"></path>
     </symbol>
 </svg>
+<div class="fixed-bottom text-bg-dark d-block d-md-none p-3 text-center">
+    <a href="#index-mobile" class="btn btn-primary ps-5 pe-5">Back to top</a>
+</div>
+<div id="index-mobile" class="d-block d-md-none p-3">
+    <nav class="nav nav-pills flex-column">
+        <h3>
+            <a href="/" class="link-dark text-decoration-none">留华生来华资料汇总</a>
+        </h3>
+        <% siteContents.forEach(contentInfo=> { %>
+            <a href="#<%= contentInfo['fileName'] %>" data-toggle="tooltip" data-placement="left"
+               title="<%= contentInfo['tooltip'] != null ? contentInfo['tooltip'] : '' %>"
+               class="nav-link">
+                <%= contentInfo['name'] %>
+                <% if (contentInfo['badge'] != null) { %>
+                    <% let badgeStyle = contentInfo['badgeStyle'] != null ? contentInfo['badgeStyle'] : 'light'; %>
+                    <span class="badge rounded-pill ms-3 text-bg-<%= badgeStyle %>">
+                            <%- contentInfo['badge'] %>
+                          </span>
+                <% } %>
+            </a>
+        <% }); %>
+    </nav>
+</div>
 <main class="d-flex flex-nowrap">
     <div class="container">
         <div class="row">
@@ -223,7 +246,8 @@ const siteContents = site.contents;
                 </nav>
             </div>
 
-            <div id="content" class="col-md-9 pt-3 pb-3 vh-100 overflow-scroll">
+
+            <div id="content" class="col-md-9 pt-3 mb-5 mb-md-0 vh-100 overflow-scroll">
                 <!-- Content At here! -->
                 <% let cardClass = ["card", "mb-3"]; siteContents.forEach(contentInfo=> {
                     if (contentInfo['hidden']) {

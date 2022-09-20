@@ -6,7 +6,7 @@
       "badge": "更新",
       "badgeStyle": "primary",
       "classList": "text-bg-primary text-center",
-      "footer": "<strong class='text-light'>❤如果觉得我们做的不错，可以到 <a href='https://github.com/tootaio/tootaio.github.io#coffee' class='card-link link-light'>这里</a> 打赏一杯咖啡哦❤</strong>"
+      "footer": "<strong class='text-light'>❤开发不易，如果觉得我们做的不错，可以到 <a target='_blank' href='https://github.com/tootaio/tootaio.github.io#coffee' class='card-link link-light'>这里</a> 打赏一杯咖啡哦❤</strong>"
     },
     {
       "fileName": "rules",

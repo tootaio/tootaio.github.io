@@ -3,8 +3,8 @@
     {
       "fileName": "announcements",
       "name": "公告",
-      "badge": null,
-      "badgeStyle": null,
+      "badge": "更新",
+      "badgeStyle": "primary",
       "classList": "text-bg-primary text-center",
       "footer": "<!--<strong class='text-light'>❤如果觉得我们做的不错，劳烦客官在 <a href='#about' class='card-link link-light'>关于我们</a> 栏目中打赏一杯咖啡哦❤</strong>-->"
     },
@@ -44,15 +44,13 @@
     {
       "fileName": "insurance",
       "name": "保险",
-      "badge": "更新",
-      "badgeStyle": "success",
       "classList": null
     },
     {
       "fileName": "chartedFlight",
       "name": "包机",
-      "badge": "还在写",
-      "badgeStyle": "warning",
+      "badge": "更新",
+      "badgeStyle": "primary",
       "classList": null
     },
     {
@@ -62,8 +60,10 @@
     },
     {
       "fileName": "afterQuarantine",
-      "name": "上海隔离之后",
-      "footer": "最后更新日期：2022年9月16日18点25分"
+      "name": "上海隔离之后（中国各省市大学防疫要求）",
+      "badge": "更新",
+      "badgeStyle": "primary",
+      "footer": "最后更新日期：2022年9月20日19点18分"
     },
     {
       "fileName": "finance",
@@ -87,8 +87,8 @@
       "hidden": true,
       "fileName": "mailFormat",
       "name": "邮箱格式",
-      "badge": null,
-      "badgeStyle": null,
+      "badge": "已删除",
+      "badgeStyle": "secondary",
       "classList": null
     },
     {

@@ -1,91 +1,94 @@
 <div class="alert alert-danger">写在前面：照顾好自己，少聚集，戴口罩，勤洗手！自己的卫生安全没问题才能确保自己能够随时起飞！！！</div>
 <script>
-    let twoWeeksBefore = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-    let prePcrDate = `${twoWeeksBefore.getDate()}/${twoWeeksBefore.getMonth() + 1}/${twoWeeksBefore.getFullYear()}`;
-    let btsSteps = [
-        {
-            Header: "返校通知书 / JW 202",
-            Content: "<p>请尽快向大学生招办处 / 国际教育学院处索取返校通知书原件、扫描件</p>"
-        },
-        {
-            Header: "做签证",
-            Content: "<div class='alert alert-warning'>预约申请，本人需亲自到场</div>" +
-                "<ol>" +
-                "<li>访问<a target='_blank' href='https://cova.cs.mofa.gov.cn'>https://cova.cs.mofa.gov.cn</a>在线填写并打印签证申请表</li>" +
-                "<li>访问<a target='_blank' href='https://avas.cs.mofa.gov.cn'>https://avas.cs.mofa.gov.cn</a>在线预约递交申请时间并打印出预约确认表</li>" +
-                "<li>详情可以参考<a href='#visa'>留学生签证申请</a></li>"+
-                "</ol>"
-        },
-        {
-            Header: "【如果曾经确诊】做 Pre-PCR",
-            Content: "<div class='alert alert-info'>Pre-PCR 在群里也称”预审“</div>" +
-                "<p>确诊康复后，在合法检测机构做 2 次 rt-PCR，采样间隔时间为 24 小时以上。检测结果需为 <code>NEGATIVE</code></p>" +
-                "<p>两次检测结果都为 <code>NEGATIVE</code> 且满 14 天之后，才可赴华。<strong>从最晚的那份报告的采样日期起算</strong></p>" +
-                "<p>将检测报告发送给邮箱 <a target='_blank' href='mailto:lingshikl315@gmail.com'>lingshikl315@gmail.com</a> 预审</p>"
-        },
-        {
-            Header: "填写马航包机表格",
-            Content: "<div class='alert alert-danger'>还没有填 Link 之前，要确保：有返校通知书、确诊过的需要 Pre-PCR，且超过 14 天（这个日期之前检测：" + prePcrDate + "）</div>" +
-                "<p>已办理好签证的留华生，尽快填写马航包机的表单<a target='_blank' href='https://forms.malaysiaairlines.com/222198174962060'>https://forms.malaysiaairlines.com/222198174962060</a>。之后可以加入 WhatsApp 群，以跟进外交部最新消息</p>"
-        },
-        {
-            Header: "收到马航包机付款电邮",
-            Content: "<div class='alert alert-info'>这封 Email 也称作 Payment Email</div>" +
-                "<div class='alert alert-warning'>请务必经常检查垃圾邮箱 Junk Mail，发件人 OPSSUPPORT</div>" +
-                "<p>一旦航班时间确定，马航将会发送通知到学生登记的邮箱，到时候学生再上传付款证明<strong>截图</strong>至马航提供的链接。<strong>请注意！因为未知原因，链接可能不会在邮件中标蓝，注意 Step 2 中的如下代码，复制到浏览器中粘贴即可。</strong></p>" +
-                "<code>" +
-                "https://forms.malaysiaairlines.com/xxxxxxxxxxxxxxx?nric=xxxxxxxxxxxx&flightNumber=xxxxxx&flightDate=xxxxxxxxxxxxxxxx,xxxxxxx&flightOrigin=KUL&flightDestination=PVG&flightTime=xxxxxxx&flightTime54=xxxxxxx&givenName=xxx&familyName=xxx&fullName=xxxxxxxxxxxxxxx&dateOf=xxxx-xx-xx&gender=xxxx&passportNumber=xxxxxxxxx&nationality=MALAYSIA&course=xxxxxxxxxxxxx&educationInstitution=xxxxxxxxxx&email=xxxxxxxxxxxxxxxx&contactNumber=+xxxxxxxxxxxxx&dose1=Sinovac&dose2=Sinovac&dose3=Sinovac&dose4=Pfizer&dateOf[day]=xx&dateOf[month]=xx&dateOf[year]=xxxx&passportExpiry[day]=xx&passportExpiry[month]=xx&passportExpiry[year]=xxxx" +
-                "</code>"
-        },
-        {
-            Header: "确认自己是否在该班机的最终名单",
-            Content: "<p>在包机 WhatsApp 群时刻跟进 admin 发出的消息，遵循外交部和马航提出的指示和要求<strong>（如改 Username 和改 About）</strong>。检查自己付款后是否有在名单内。若无，则需联系马航负责人员</p>"
-        },
-        {
-            Header: "登机前 24hrs 和 48hrs 前做两次核酸检测",
-            Content: "<p>无论是否曾经确诊，都必须在起飞前 48 小时和 24 小时分别在两家<strong>不同的诊所、且不同的化验室 (LAB)</strong>做 1 次核酸检测。<strong>rt-PCR</strong></p>" +
-                "<ul>" +
-                "<li>曾确诊，需做 4 次 PCR，花费约 RM600 - RM800</li>" +
-                "<li>未曾确诊，需做 2 次 PCR，花费约 RM300 - RM400</li>" +
-                "</ul>"
-        },
-        {
-            Header: "拿到绿码",
-            Content: "<p>历经千辛万苦，来到最后一个步骤！</p>" +
-                "<p>通过登机前 2 次核酸检测后，中国驻马大使馆会在 12 小时内发出绿码<sup>[<a href='#greenCode'>阅读这里</a>]</sup>。获取到绿码的学生才可以起飞！</p>"
+    (function () {
+        let twoWeeksBefore = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+        let prePcrDate = `${twoWeeksBefore.getDate()}/${twoWeeksBefore.getMonth() + 1}/${twoWeeksBefore.getFullYear()}`;
+        let btsSteps = [
+            {
+                Header: "返校通知书 / JW 202",
+                Content: "<p>请尽快向大学生招办处 / 国际教育学院处索取返校通知书原件、扫描件</p>"
+            },
+            {
+                Header: "做签证",
+                Content: "<div class='alert alert-warning'>预约申请，本人需亲自到场</div>" +
+                    "<ol>" +
+                    "<li>访问<a target='_blank' href='https://cova.cs.mofa.gov.cn'>https://cova.cs.mofa.gov.cn</a>在线填写并打印签证申请表</li>" +
+                    "<li>访问<a target='_blank' href='https://avas.cs.mofa.gov.cn'>https://avas.cs.mofa.gov.cn</a>在线预约递交申请时间并打印出预约确认表</li>" +
+                    "<li>详情可以参考<a href='#visa'>留学生签证申请</a></li>" +
+                    "</ol>"
+            },
+            {
+                Header: "【如果曾经确诊】做 Pre-PCR",
+                Content: "<div class='alert alert-info'>Pre-PCR 在群里也称”预审“</div>" +
+                    "<p>确诊康复后，在合法检测机构做 2 次 rt-PCR，采样间隔时间为 24 小时以上。检测结果需为 <code>NEGATIVE</code></p>" +
+                    "<p>两次检测结果都为 <code>NEGATIVE</code> 且满 14 天之后，才可赴华。<strong>从最晚的那份报告的采样日期起算</strong></p>" +
+                    "<p>将检测报告发送给邮箱 <a target='_blank' href='mailto:lingshikl315@gmail.com'>lingshikl315@gmail.com</a> 预审</p>"
+            },
+            {
+                Header: "填写马航包机表格",
+                Content: "<div class='alert alert-danger'>还没有填 Link 之前，要确保：有返校通知书、确诊过的需要 Pre-PCR，且超过 14 天（这个日期之前检测：" + prePcrDate + "）</div>" +
+                    "<p>已办理好签证的留华生，尽快填写马航包机的表单<a target='_blank' href='https://forms.malaysiaairlines.com/222198174962060'>https://forms.malaysiaairlines.com/222198174962060</a>。之后可以加入 WhatsApp 群，以跟进外交部最新消息</p>"
+            },
+            {
+                Header: "收到马航包机付款电邮",
+                Content: "<div class='alert alert-info'>这封 Email 也称作 Payment Email</div>" +
+                    "<div class='alert alert-warning'>请务必经常检查垃圾邮箱 Junk Mail，发件人 OPSSUPPORT</div>" +
+                    "<p>一旦航班时间确定，马航将会发送通知到学生登记的邮箱，到时候学生再上传付款证明<strong>截图</strong>至马航提供的链接。<strong>请注意！因为未知原因，链接可能不会在邮件中标蓝，注意 Step 2 中的如下代码，复制到浏览器中粘贴即可。</strong></p>" +
+                    "<code>" +
+                    "https://forms.malaysiaairlines.com/xxxxxxxxxxxxxxx?nric=xxxxxxxxxxxx&flightNumber=xxxxxx&flightDate=xxxxxxxxxxxxxxxx,xxxxxxx&flightOrigin=KUL&flightDestination=PVG&flightTime=xxxxxxx&flightTime54=xxxxxxx&givenName=xxx&familyName=xxx&fullName=xxxxxxxxxxxxxxx&dateOf=xxxx-xx-xx&gender=xxxx&passportNumber=xxxxxxxxx&nationality=MALAYSIA&course=xxxxxxxxxxxxx&educationInstitution=xxxxxxxxxx&email=xxxxxxxxxxxxxxxx&contactNumber=+xxxxxxxxxxxxx&dose1=Sinovac&dose2=Sinovac&dose3=Sinovac&dose4=Pfizer&dateOf[day]=xx&dateOf[month]=xx&dateOf[year]=xxxx&passportExpiry[day]=xx&passportExpiry[month]=xx&passportExpiry[year]=xxxx" +
+                    "</code>"
+            },
+            {
+                Header: "确认自己是否在该班机的最终名单",
+                Content: "<p>在包机 WhatsApp 群时刻跟进 admin 发出的消息，遵循外交部和马航提出的指示和要求<strong>（如改 Username 和改 About）</strong>。检查自己付款后是否有在名单内。若无，则需联系马航负责人员</p>"
+            },
+            {
+                Header: "登机前 24hrs 和 48hrs 前做两次核酸检测",
+                Content: "<p>无论是否曾经确诊，都必须在起飞前 48 小时和 24 小时分别在两家<strong>不同的诊所、且不同的化验室 (LAB)</strong>做 1 次核酸检测。<strong>rt-PCR</strong></p>" +
+                    "<ul>" +
+                    "<li>曾确诊，需做 4 次 PCR，花费约 RM600 - RM800</li>" +
+                    "<li>未曾确诊，需做 2 次 PCR，花费约 RM300 - RM400</li>" +
+                    "</ul>" +
+                    "<p>检测之后，<a href='#backToSchool'>阅读这里</a>按照指示上传</p>"
+            },
+            {
+                Header: "拿到绿码",
+                Content: "<p>历经千辛万苦，来到最后一个步骤！</p>" +
+                    "<p>通过登机前 2 次核酸检测后，中国驻马大使馆会在 12 小时内发出绿码<sup>[<a href='#greenCode'>阅读这里</a>]</sup>。获取到绿码的学生才可以起飞！</p>"
+            }
+        ]
+
+        let spoilerMaster = document.createElement('div');
+        spoilerMaster.classList.add('accordion', 'mb-3');
+
+        for (const i in btsSteps) {
+            const currentStep = btsSteps[i];
+            const currentId = `bts-${i + 1}`;
+            let item = document.createElement('div');
+            item.classList.add('accordion-item');
+            let header = document.createElement('h2');
+            header.classList.add('accordion-header');
+            let headerButton = document.createElement('button');
+            headerButton.classList.add('accordion-button', 'collapsed');
+            headerButton.type = 'button';
+            headerButton.setAttribute('data-bs-toggle', 'collapse');
+            headerButton.setAttribute('data-bs-target', '#' + currentId);
+            headerButton.ariaExpanded = 'false';
+            headerButton.setAttribute('aria-controls', currentId);
+            headerButton.innerText = `Step #${Number(i) + 1} ` + currentStep.Header;
+            let content = document.createElement('div');
+            content.id = currentId;
+            content.classList.add('accordion-collapse', 'collapse')
+            content.setAttribute('aria-labelledby', currentId);
+            let contentBody = document.createElement('div');
+            contentBody.classList.add('accordion-body');
+            contentBody.innerHTML = currentStep.Content;
+            header.appendChild(headerButton);
+            item.appendChild(header);
+            content.appendChild(contentBody);
+            item.appendChild(content);
+            spoilerMaster.appendChild(item);
+            document.scripts[document.scripts.length - 1].parentNode.appendChild(spoilerMaster);
         }
-    ]
-
-    let spoilerMaster = document.createElement('div');
-    spoilerMaster.classList.add('accordion', 'mb-3');
-
-    for (const i in btsSteps) {
-        const currentStep = btsSteps[i];
-        const currentId = `bts-${i + 1}`;
-        let item = document.createElement('div');
-        item.classList.add('accordion-item');
-        let header = document.createElement('h2');
-        header.classList.add('accordion-header');
-        let headerButton = document.createElement('button');
-        headerButton.classList.add('accordion-button', 'collapsed');
-        headerButton.type = 'button';
-        headerButton.setAttribute('data-bs-toggle', 'collapse');
-        headerButton.setAttribute('data-bs-target', '#' + currentId);
-        headerButton.ariaExpanded = 'false';
-        headerButton.setAttribute('aria-controls', currentId);
-        headerButton.innerText = `Step #${Number(i) + 1} ` + currentStep.Header;
-        let content = document.createElement('div');
-        content.id = currentId;
-        content.classList.add('accordion-collapse', 'collapse')
-        content.setAttribute('aria-labelledby', currentId);
-        let contentBody = document.createElement('div');
-        contentBody.classList.add('accordion-body');
-        contentBody.innerHTML = currentStep.Content;
-        header.appendChild(headerButton);
-        item.appendChild(header);
-        content.appendChild(contentBody);
-        item.appendChild(content);
-        spoilerMaster.appendChild(item);
-        document.scripts[document.scripts.length - 1].parentNode.appendChild(spoilerMaster);
-    }
+    })();
 </script>

@@ -45,6 +45,10 @@
       "classList": null
     },
     {
+      "fileName": "documentCheck",
+      "name": "行前文件整理"
+    },
+    {
       "fileName": "chartedFlight",
       "name": "包机",
       "classList": null

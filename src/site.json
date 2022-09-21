@@ -3,8 +3,6 @@
     {
       "fileName": "announcements",
       "name": "公告",
-      "badge": "更新",
-      "badgeStyle": "primary",
       "classList": "text-bg-primary text-center",
       "footer": "<strong class='text-light'>❤开发不易，如果觉得我们做的不错，可以到 <a target='_blank' href='https://github.com/tootaio/tootaio.github.io#coffee' class='card-link link-light'>这里</a> 打赏一杯咖啡哦❤</strong>"
     },
@@ -49,8 +47,6 @@
     {
       "fileName": "chartedFlight",
       "name": "包机",
-      "badge": "更新",
-      "badgeStyle": "primary",
       "classList": null
     },
     {
@@ -61,8 +57,6 @@
     {
       "fileName": "afterQuarantine",
       "name": "上海隔离之后（中国各省市大学防疫要求）",
-      "badge": "更新",
-      "badgeStyle": "primary",
       "footer": "最后更新日期：2022年9月20日19点18分"
     },
     {

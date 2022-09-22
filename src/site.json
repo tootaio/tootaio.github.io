@@ -3,10 +3,8 @@
     {
       "fileName": "announcements",
       "name": "公告",
-      "badge": null,
-      "badgeStyle": null,
       "classList": "text-bg-primary text-center",
-      "footer": "<strong class='text-light'>❤如果觉得我们做的不错，劳烦客官在 <a href='#about' class='card-link link-light'>关于我们</a> 栏目中打赏一杯咖啡哦❤</strong>"
+      "footer": "<strong class='text-light'>❤开发不易，如果觉得我们做的不错，可以到 <a target='_blank' href='https://github.com/tootaio/tootaio.github.io#coffee' class='card-link link-light'>这里</a> 打赏一杯咖啡哦❤</strong>"
     },
     {
       "fileName": "rules",
@@ -44,15 +42,15 @@
     {
       "fileName": "insurance",
       "name": "保险",
-      "badge": "更新",
-      "badgeStyle": "success",
       "classList": null
+    },
+    {
+      "fileName": "documentsCheck",
+      "name": "行前文件整理"
     },
     {
       "fileName": "chartedFlight",
       "name": "包机",
-      "badge": "还在写",
-      "badgeStyle": "warning",
       "classList": null
     },
     {
@@ -62,8 +60,8 @@
     },
     {
       "fileName": "afterQuarantine",
-      "name": "上海隔离之后",
-      "footer": "最后更新日期：2022年9月16日18点25分"
+      "name": "上海隔离之后（中国各省市大学防疫要求）",
+      "footer": "最后更新日期：2022年9月20日19点18分"
     },
     {
       "fileName": "finance",
@@ -87,8 +85,8 @@
       "hidden": true,
       "fileName": "mailFormat",
       "name": "邮箱格式",
-      "badge": null,
-      "badgeStyle": null,
+      "badge": "已删除",
+      "badgeStyle": "secondary",
       "classList": null
     },
     {

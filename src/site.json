@@ -54,6 +54,11 @@
       "classList": null
     },
     {
+      "fileName": "beforeOnboard",
+      "name": "登机前",
+      "footer": "祝您旅途愉快！"
+    },
+    {
       "fileName": "quarantine",
       "name": "隔离",
       "classList": null

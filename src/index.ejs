@@ -204,6 +204,7 @@ const siteContents = site.contents;
         <h3>
             <a href="/" class="link-dark text-decoration-none">留华生来华资料汇总</a>
         </h3>
+        <div class="text-info">目录已经尽可能照着步骤排列，欢迎提出建议</div>
         <% siteContents.forEach(contentInfo=> { %>
             <a href="#<%= contentInfo['fileName'] %>" data-toggle="tooltip" data-placement="left"
                title="<%= contentInfo['tooltip'] != null ? contentInfo['tooltip'] : '' %>"

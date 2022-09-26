@@ -33,15 +33,12 @@
       "classList": null
     },
     {
-      "fileName": "greenCode",
-      "name": "绿码（健康码）",
-      "badge": null,
-      "badgeStyle": null,
-      "classList": null
+      "fileName": "insurance",
+      "name": "保险"
     },
     {
-      "fileName": "insurance",
-      "name": "保险",
+      "fileName": "chartedFlight",
+      "name": "包机行李、飞机餐",
       "classList": null
     },
     {
@@ -49,8 +46,10 @@
       "name": "行前文件整理"
     },
     {
-      "fileName": "chartedFlight",
-      "name": "包机",
+      "fileName": "greenCode",
+      "name": "绿码（健康码）",
+      "badge": null,
+      "badgeStyle": null,
       "classList": null
     },
     {

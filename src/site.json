@@ -102,6 +102,12 @@
       "classList": null
     },
     {
+      "fileName": "passportRenewal",
+      "name": "护照更新",
+      "badge": "队列中",
+      "badgeStyle": "secondary"
+    },
+    {
       "fileName": "contactList",
       "name": "Contact List",
       "badge": null,

@@ -299,7 +299,8 @@ const siteContents = site.contents;
     function shareLink(link) {
         let sharedLink = window.location.href.split('#')[0] + '#' + link;
         navigator.clipboard.writeText(sharedLink);
-        alert("Link copied!");
+        navigator.clipboard.readText().then(
+            (clipText) => alert("Copied: " + clipText));
     }
 </script>
 </body>

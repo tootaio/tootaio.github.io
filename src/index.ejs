@@ -196,9 +196,11 @@ const siteContents = site.contents;
               fill="#ED70A3" p-id="1145"></path>
     </symbol>
 </svg>
+
 <div class="fixed-bottom text-bg-dark d-block d-md-none p-3 text-center">
     <a href="#index-mobile" class="btn btn-primary ps-5 pe-5">Back to top</a>
 </div>
+<!-- Mobile Menu -->
 <div id="index-mobile" class="d-block d-md-none p-3">
     <nav class="nav nav-pills flex-column">
         <h3>
@@ -212,9 +214,7 @@ const siteContents = site.contents;
                 <%= contentInfo['name'] %>
                 <% if (contentInfo['badge'] != null) { %>
                     <% let badgeStyle = contentInfo['badgeStyle'] != null ? contentInfo['badgeStyle'] : 'light'; %>
-                    <span class="badge rounded-pill ms-3 text-bg-<%= badgeStyle %>">
-                            <%- contentInfo['badge'] %>
-                          </span>
+                    <span class="badge rounded-pill ms-3 text-bg-<%= badgeStyle %>"><%- contentInfo['badge'] %></span>
                 <% } %>
             </a>
         <% }); %>
@@ -230,6 +230,7 @@ const siteContents = site.contents;
                         <h3>
                             <a href="/" class="link-dark text-decoration-none">留华生来华资料汇总</a>
                         </h3>
+                        <div class="text-info">目录已经尽可能照着步骤排列，欢迎提出建议</div>
                         <% siteContents.forEach(contentInfo=> { %>
                             <a href="#<%= contentInfo['fileName'] %>" data-toggle="tooltip" data-placement="left"
                                title="<%= contentInfo['tooltip'] != null ? contentInfo['tooltip'] : '' %>"
@@ -269,6 +270,10 @@ const siteContents = site.contents;
                         <%- contentInfo['badge'] %>
                       </span>
                         <% } %>
+                        <button onclick="shareLink('<%= contentInfo['fileName'] %>')"
+                                class="float-end btn btn-outline-warning">
+                            分享
+                        </button>
                     </div>
                     <div class="card-body">
                         <% const html = require("./Topics/" + contentInfo['fileName'] + ".html"); %>
@@ -289,6 +294,12 @@ const siteContents = site.contents;
 <script>
     if (window.location.hash) {
         document.querySelector(window.location.hash).scrollIntoView()
+    }
+
+    function shareLink(link) {
+        let sharedLink = window.location.href.split('#')[0] + '/#' + link;
+        navigator.clipboard.writeText(sharedLink);
+        alert("Link copied!");
     }
 </script>
 </body>

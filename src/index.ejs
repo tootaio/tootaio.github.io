@@ -270,10 +270,10 @@ const siteContents = site.contents;
                         <%- contentInfo['badge'] %>
                       </span>
                         <% } %>
-                        <button onclick="shareLink('<%= contentInfo['fileName'] %>')"
-                                class="float-end btn btn-outline-warning">
+                        <a onclick="shareLink('<%= contentInfo['fileName'] %>')"
+                                class="float-end link-secondary text-decoration-none">
                             分享
-                        </button>
+                        </a>
                     </div>
                     <div class="card-body">
                         <% const html = require("./Topics/" + contentInfo['fileName'] + ".html"); %>
@@ -299,7 +299,7 @@ const siteContents = site.contents;
     function shareLink(link) {
         let sharedLink = window.location.href.split('#')[0] + '#' + link;
         navigator.clipboard.writeText(sharedLink);
-        alert("Copied link, thanks for sharing!")
+        alert("Link copied to clipboard, thanks for sharing!")
         // navigator.clipboard.readText().then(
         //     (clipText) => alert("Copied: " + clipText));
     }

@@ -64,19 +64,21 @@
     },
     {
       "fileName": "afterQuarantine",
-      "name": "上海隔离之后（中国各省市大学防疫要求）",
-      "footer": "最后更新日期：2022年9月20日19点18分"
+      "name": "上海隔离之后",
+      "badge": "更新",
+      "badgeStyle": "primary"
     },
     {
       "fileName": "finance",
       "name": "资金",
-      "badge": "队列中",
-      "badgeStyle": "secondary",
-      "classList": null
+      "badge": "更新",
+      "badgeStyle": "primary"
     },
     {
       "fileName": "roaming",
-      "name": "手机漫游 Roaming"
+      "name": "手机漫游 Roaming",
+      "badge": "更新",
+      "badgeStyle": "primary"
     },
     {
       "fileName": "tips",

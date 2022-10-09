@@ -14,6 +14,10 @@
       "classList": "text-bg-danger text-center"
     },
     {
+      "fileName": "resources",
+      "name": "资料来源"
+    },
+    {
       "fileName": "backToSchool",
       "name": "返校步骤",
       "badge": "热门",

@@ -27,14 +27,20 @@
     {
       "fileName": "visa",
       "name": "留学签证申请",
-      "badge": null,
-      "badgeStyle": null,
-      "classList": null
+      "badge": "更新",
+      "badgeStyle": "primary"
+    },
+    {
+      "fileName": "kenaCovid",
+      "name": "曾经确诊",
+      "badge": "重要",
+      "badgeStyle": "danger"
     },
     {
       "fileName": "pcr",
       "name": "核酸检测",
-      "classList": null
+      "badge": "更新",
+      "badgeStyle": "primary"
     },
     {
       "fileName": "insurance",
@@ -68,21 +74,15 @@
     },
     {
       "fileName": "afterQuarantine",
-      "name": "上海隔离之后",
-      "badge": "更新",
-      "badgeStyle": "primary"
+      "name": "上海隔离之后"
     },
     {
       "fileName": "finance",
-      "name": "资金",
-      "badge": "更新",
-      "badgeStyle": "primary"
+      "name": "资金"
     },
     {
       "fileName": "roaming",
-      "name": "手机漫游 Roaming",
-      "badge": "更新",
-      "badgeStyle": "primary"
+      "name": "手机漫游 Roaming"
     },
     {
       "fileName": "tips",

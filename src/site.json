@@ -53,7 +53,9 @@
     },
     {
       "fileName": "documentsCheck",
-      "name": "行前文件整理"
+      "name": "【去机场前看】行前文件整理",
+      "badge": "重要",
+      "badgeStyle": "danger"
     },
     {
       "fileName": "greenCode",

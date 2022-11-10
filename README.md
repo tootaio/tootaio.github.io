@@ -77,3 +77,10 @@ All of the class is Bootstrap compatible.
 <img alt="打赏" src="./src/Topics/Images/微信支付.png" height="256">
 <img alt="打赏" src="./src/Topics/Images/支付宝收款码.jpg" height="256">
 </div>
+
+## TODO-List
+
+- [ ] 修复copy的bug 
+- [ ] 更新条规第3项
+- [ ] 增加claim行李步骤
+- [ ] 更新其他两个地区的签证申请位置

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tootaio Password Generator V1.0</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<div id="App">
+    <h1>Tootaio Password Generator</h1>
+    <div class="wrap">
+        <div class="userInputGroup">
+            <label for="secretPhase">Please insert secret phase:</label>
+            <input type="text" name="secretPhase" id="secretPhase">
+            <label for="datetimePicker">Please choose the time:</label>
+            <input type="datetime-local" name="datetimePicker" id="datetimePicker">
+        </div>
+        <button onclick="generateKey()" id="generateButton">Generate</button>
+        <div id="output" class="outputField placeholder">Password Output</div>
+        <hr>
+        <button onclick="copyToClipboard()" id="copyButton">Copy</button>
+    </div>
+    <script src="index.js"></script>
+</div>
+</body>
+
+</html>
